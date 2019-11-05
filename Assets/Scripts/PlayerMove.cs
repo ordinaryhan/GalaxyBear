@@ -35,11 +35,14 @@ public class PlayerMove : MonoBehaviour
         if (moveDir != Vector3.zero)
         {
             // 카메라 방향을 기준으로 moveDir 조정
-            Vector3 camDir = mainCam.forward;
-            camDir.y = 0;
+            Vector3 camDir = mainCam.forward, transDir = transform.forward;
             camDir = camDir.normalized;
-            moveDir = Quaternion.FromToRotation(Vector3.forward, camDir) * moveDir;
-            //print(moveDir);
+            transDir = transDir.normalized;
+            moveDir = Quaternion.FromToRotation(transDir, camDir) * moveDir;
+            moveDir.y = 0;
+            //print("<trans>");  print(transDir);
+            //print("<cam>");  print(camDir);
+            //print("<move>");  print(moveDir);
             gameObject.transform.Translate(moveDir * 0.1f * playerSpeed * Time.deltaTime);
         }
 
