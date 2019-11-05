@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public int playerSpeed;
-    bool grounded;
+    
+    [SerializeField]
+    private int playerSpeed = 20;
+    [SerializeField]
+    private float jumpForce = 50;
+    [SerializeField]
+    bool grounded = true;
+
+    public Transform mainCam;
     Rigidbody rigid;
-    public float jumpForce;
-    public LayerMask groundedMask;
     Vector3 moveAmount;
     Vector3 smoothMoveVelocity;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerSpeed = 6;
-        jumpForce = 20;
+        playerSpeed = 20;
+        jumpForce = 50;
         rigid = GetComponent<Rigidbody>();
     }
 
@@ -26,11 +31,31 @@ public class PlayerMove : MonoBehaviour
         //Move
         float inputY = Input.GetAxis("Vertical");
         float inputX = Input.GetAxis("Horizontal");
-        Vector3 moveDir = new Vector3(inputX, 0, inputY).normalized;
-        Vector3 targetMoveAmount = moveDir * playerSpeed;
-        moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
+        Vector3 moveDir = new Vector3(inputX, 0, inputY);
+        if (moveDir != Vector3.zero)
+        {
+            // 카메라 방향을 기준으로 moveDir 조정
+            Vector3 camDir = mainCam.forward, transDir = transform.forward;
+            camDir = camDir.normalized;
+            transDir = transDir.normalized;
+            moveDir = Quaternion.FromToRotation(transDir, camDir) * moveDir;
+            moveDir.y = 0;
+            //print("<trans>");  print(transDir);
+            //print("<cam>");  print(camDir);
+            //print("<move>");  print(moveDir);
+            gameObject.transform.Translate(moveDir * 0.1f * playerSpeed * Time.deltaTime);
+        }
 
         //Jump
+#if UNITY_EDITOR
+        if (Input.GetKey(KeyCode.Space)) //Y
+        {
+            if (grounded)
+            {
+                rigid.AddForce(transform.up * jumpForce);
+            }
+        }
+#else
         if (Input.GetKey(KeyCode.JoystickButton3)) //Y
         {
             if (grounded)
@@ -38,12 +63,13 @@ public class PlayerMove : MonoBehaviour
                 rigid.AddForce(transform.up * jumpForce);
             }
         }
+#endif
 
         // Grounded check
         Ray ray = new Ray(transform.position, -transform.up);
         RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, 1 + .1f, groundedMask))
+        int groundedMask = 1 << LayerMask.NameToLayer("Ground");
+        if (Physics.Raycast(ray, out hit, 0.7f, groundedMask))
         {
             grounded = true;
         }
@@ -51,12 +77,6 @@ public class PlayerMove : MonoBehaviour
         {
             grounded = false;
         }
-    }
-    void FixedUpdate()
-    {
-        // Apply movement to rigidbody
-        Vector3 localMove = transform.TransformDirection(moveAmount) * Time.fixedDeltaTime;
-        rigid.MovePosition(rigid.position + localMove);
     }
 
 }
