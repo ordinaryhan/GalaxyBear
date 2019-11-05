@@ -6,23 +6,22 @@ public class PlayerMove : MonoBehaviour
 {
     
     [SerializeField]
-    private int playerSpeed = 10;
+    private int playerSpeed = 20;
     [SerializeField]
-    private float jumpForce = 15;
+    private float jumpForce = 50;
     [SerializeField]
-    private bool grounded = true;
+    bool grounded = true;
 
     public Transform mainCam;
     Rigidbody rigid;
-    LayerMask groundedMask;
     Vector3 moveAmount;
     Vector3 smoothMoveVelocity;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerSpeed = 10;
-        jumpForce = 15;
+        playerSpeed = 20;
+        jumpForce = 50;
         rigid = GetComponent<Rigidbody>();
     }
 
@@ -40,7 +39,7 @@ public class PlayerMove : MonoBehaviour
             camDir.y = 0;
             camDir = camDir.normalized;
             moveDir = Quaternion.FromToRotation(Vector3.forward, camDir) * moveDir;
-            print(moveDir);
+            //print(moveDir);
             gameObject.transform.Translate(moveDir * 0.1f * playerSpeed * Time.deltaTime);
         }
 
@@ -64,31 +63,14 @@ public class PlayerMove : MonoBehaviour
 #endif
 
         // Grounded check
-        /*
         Ray ray = new Ray(transform.position, -transform.up);
         RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, 1 + .1f, groundedMask))
+        int groundedMask = 1 << LayerMask.NameToLayer("Ground");
+        if (Physics.Raycast(ray, out hit, 0.7f, groundedMask))
         {
             grounded = true;
         }
         else
-        {
-            grounded = false;
-        }*/
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Planet"))
-        {
-            grounded = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.CompareTag("Planet"))
         {
             grounded = false;
         }
