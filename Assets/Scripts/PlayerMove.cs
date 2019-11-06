@@ -16,6 +16,7 @@ public class PlayerMove : MonoBehaviour
     Rigidbody rigid;
     Vector3 moveAmount;
     Vector3 smoothMoveVelocity;
+    int groundedMask;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class PlayerMove : MonoBehaviour
         playerSpeed = 20;
         jumpForce = 50;
         rigid = GetComponent<Rigidbody>();
+        groundedMask = 1 << LayerMask.NameToLayer("Ground");
     }
 
     // Update is called once per frame
@@ -43,7 +45,7 @@ public class PlayerMove : MonoBehaviour
             //print("<trans>");  print(transDir);
             //print("<cam>");  print(camDir);
             //print("<move>");  print(moveDir);
-            gameObject.transform.Translate(moveDir * 0.1f * playerSpeed * Time.deltaTime);
+            transform.Translate(moveDir * 0.1f * playerSpeed * Time.deltaTime);
         }
 
         //Jump
@@ -68,7 +70,6 @@ public class PlayerMove : MonoBehaviour
         // Grounded check
         Ray ray = new Ray(transform.position, -transform.up);
         RaycastHit hit;
-        int groundedMask = 1 << LayerMask.NameToLayer("Ground");
         if (Physics.Raycast(ray, out hit, 0.7f, groundedMask))
         {
             grounded = true;

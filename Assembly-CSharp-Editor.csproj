@@ -73,6 +73,8 @@
     <Compile Include="Assets\GoogleVR\Editor\GvrEditorSettings.cs" />
     <Compile Include="Assets\GoogleVR\Editor\GvrHeadsetEditor.cs" />
     <Compile Include="Assets\GoogleVR\Editor\InstantPreviewEditor.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
+    <Compile Include="Assets\JMO Assets\WarFX\Editor\CFX_SpawnSystemEditor.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBear/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
