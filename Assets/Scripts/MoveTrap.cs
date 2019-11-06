@@ -46,12 +46,12 @@ public class MoveTrap : MonoBehaviour
         Vector3 tempV;
         while (true)
         {
-            // order 출력 (테스트용)
+            /* order 출력 (테스트용)
             print("[trapOrder]");
             for (int i = 0; i < trapLeng; i++)
             {
                 print(order[i]);
-            }
+            }*/
             // 랜덤으로 하나씩 내려가기
             for (int i = 0; i < trapLeng; i++)
             {
@@ -60,7 +60,7 @@ public class MoveTrap : MonoBehaviour
                 for (int j = 0; j < trapSpeed; j++)
                 {
                     tempV = trap[tempNum].position;
-                    tempV.y = tempY - 0.2f / trapSpeed * j;
+                    tempV.y = tempY - gab / trapSpeed * j;
                     trap[tempNum].position = tempV;
                     yield return new WaitForSeconds(0.01f);
                 }
@@ -70,11 +70,11 @@ public class MoveTrap : MonoBehaviour
             for (int i = 0; i < trapLeng; i++)
             {
                 tempNum = order[i];
-                tempY = initY[tempNum] - 0.2f;
+                tempY = initY[tempNum] - gab;
                 for (int j = 0; j < trapSpeed; j++)
                 {
                     tempV = trap[tempNum].position;
-                    tempV.y = tempY + 0.2f / trapSpeed * j;
+                    tempV.y = tempY + gab / trapSpeed * j;
                     trap[tempNum].position = tempV;
                     yield return new WaitForSeconds(0.01f);
                 }
@@ -82,7 +82,7 @@ public class MoveTrap : MonoBehaviour
                 for (int j = 0; j < trapSpeed; j++)
                 {
                     tempV = trap[tempNum].position;
-                    tempV.y = tempY - 0.2f / trapSpeed * j;
+                    tempV.y = tempY - gab / trapSpeed * j;
                     trap[tempNum].position = tempV;
                     yield return new WaitForSeconds(0.01f);
                 }
@@ -94,9 +94,9 @@ public class MoveTrap : MonoBehaviour
                 for (int i = 0; i < trapLeng; i++)
                 {
                     tempNum = order[i];
-                    tempY = initY[tempNum] - 0.2f;
+                    tempY = initY[tempNum] - gab;
                     tempV = trap[tempNum].position;
-                    tempV.y = tempY + 0.2f / trapSpeed * j;
+                    tempV.y = tempY + gab / trapSpeed * j;
                     trap[tempNum].position = tempV;
                 }
                 yield return new WaitForSeconds(0.01f);
