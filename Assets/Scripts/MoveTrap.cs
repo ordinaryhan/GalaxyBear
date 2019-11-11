@@ -6,7 +6,7 @@ public class MoveTrap : MonoBehaviour
 {
 
     public Transform[] trap;
-    int trapSpeed = 20;
+    int trapSpeed = 30;
     float[] initY;
     int trapLeng;
     int[] order;
@@ -59,8 +59,9 @@ public class MoveTrap : MonoBehaviour
                 tempY = initY[tempNum];
                 for (int j = 0; j < trapSpeed; j++)
                 {
-                    tempV = trap[tempNum].position;
-                    tempV.y = tempY - gab / trapSpeed * j;
+                    Vector3 moveDir = trap[tempNum].up * gab;
+                    tempV = trap[tempNum].position - moveDir / trapSpeed * j;
+                    //tempV.y = tempY - gab / trapSpeed * j;
                     trap[tempNum].position = tempV;
                     yield return new WaitForSeconds(0.01f);
                 }
@@ -73,16 +74,19 @@ public class MoveTrap : MonoBehaviour
                 tempY = initY[tempNum] - gab;
                 for (int j = 0; j < trapSpeed; j++)
                 {
-                    tempV = trap[tempNum].position;
-                    tempV.y = tempY + gab / trapSpeed * j;
+                    Vector3 moveDir = trap[tempNum].up * gab;
+                    tempV = trap[tempNum].position + moveDir / trapSpeed * j;
+                    //tempV.y = tempY + gab / trapSpeed * j;
                     trap[tempNum].position = tempV;
                     yield return new WaitForSeconds(0.01f);
                 }
                 tempY = initY[order[i]];
                 for (int j = 0; j < trapSpeed; j++)
                 {
-                    tempV = trap[tempNum].position;
-                    tempV.y = tempY - gab / trapSpeed * j;
+                    Vector3 moveDir = trap[tempNum].up * gab;
+                    
+                    tempV = trap[tempNum].position - moveDir / trapSpeed * j;
+                    //tempV.y = tempY - gab / trapSpeed * j;
                     trap[tempNum].position = tempV;
                     yield return new WaitForSeconds(0.01f);
                 }
@@ -95,8 +99,9 @@ public class MoveTrap : MonoBehaviour
                 {
                     tempNum = order[i];
                     tempY = initY[tempNum] - gab;
-                    tempV = trap[tempNum].position;
-                    tempV.y = tempY + gab / trapSpeed * j;
+                    Vector3 moveDir = trap[tempNum].up * gab;
+                    tempV = trap[tempNum].position + moveDir / trapSpeed * j;
+                    //tempV.y = tempY + gab / trapSpeed * j;
                     trap[tempNum].position = tempV;
                 }
                 yield return new WaitForSeconds(0.01f);

@@ -4,8 +4,26 @@ using UnityEngine;
 
 public class GravityAttractor : MonoBehaviour
 {
+    public Transform mainCam;
     public float gravity = -9.8f;
+    public int rotateSpeed = 10;
+    Vector3 thisPos;
 
+    private void Start()
+    {
+        thisPos = transform.position;
+    }
+
+    private void Update()
+    {
+        float inputY = - Input.GetAxis("Vertical");
+        float inputX = Input.GetAxis("Horizontal");
+        if (inputY != 0 || inputX != 0)
+        {
+            Vector3 moveDir = mainCam.right * inputY + mainCam.forward * inputX;
+            transform.RotateAround(thisPos, moveDir, Time.deltaTime * rotateSpeed);
+        }
+    }
 
     public void Attract(Rigidbody body)
     {

@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     bool grounded = true;
 
-    public Transform mainCam;
+    public Transform mainCam, arrow;
     Rigidbody rigid;
     Vector3 moveAmount;
     Vector3 smoothMoveVelocity;
@@ -30,23 +30,6 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Move
-        float inputY = Input.GetAxis("Vertical");
-        float inputX = Input.GetAxis("Horizontal");
-        Vector3 moveDir = new Vector3(inputX, 0, inputY);
-        if (moveDir != Vector3.zero)
-        {
-            // 카메라 방향을 기준으로 moveDir 조정
-            Vector3 camDir = mainCam.forward, transDir = transform.forward;
-            camDir = camDir.normalized;
-            transDir = transDir.normalized;
-            moveDir = Quaternion.FromToRotation(transDir, camDir) * moveDir;
-            moveDir.y = 0;
-            //print("<trans>");  print(transDir);
-            //print("<cam>");  print(camDir);
-            //print("<move>");  print(moveDir);
-            transform.Translate(moveDir * 0.1f * playerSpeed * Time.deltaTime);
-        }
 
         //Jump
 #if UNITY_EDITOR
