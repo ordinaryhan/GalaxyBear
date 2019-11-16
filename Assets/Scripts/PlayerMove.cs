@@ -12,6 +12,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     bool grounded = true;
 
+    public HealthManager HM;
     public Transform mainCam, arrow;
     Rigidbody rigid;
     Vector3 moveAmount;
@@ -25,6 +26,19 @@ public class PlayerMove : MonoBehaviour
         jumpForce = 50;
         rigid = GetComponent<Rigidbody>();
         groundedMask = 1 << LayerMask.NameToLayer("Ground");
+        rigid.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("thorn"))
+        {
+            HM.Hit();
+        }
+        else if (other.CompareTag("explosion"))
+        {
+            HM.Hit();
+        }
     }
 
     // Update is called once per frame
@@ -33,7 +47,7 @@ public class PlayerMove : MonoBehaviour
 
         //Jump
 #if UNITY_EDITOR
-        if (Input.GetKey(KeyCode.Space)) //Y
+        if (Input.GetKey(KeyCode.Space)) //SPACE
         {
             if (grounded)
             {

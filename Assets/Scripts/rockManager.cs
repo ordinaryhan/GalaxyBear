@@ -45,7 +45,7 @@ public class rockManager : MonoBehaviour
             yield return new WaitForSeconds(2f);
             rockTrans.position = startV;
             rockObj.SetActive(true);
-            yield return new WaitForSeconds(8f);
+            yield return new WaitForSeconds(4f);
         }
     }
 }

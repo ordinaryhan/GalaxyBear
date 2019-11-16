@@ -18,6 +18,8 @@ public class GravityAttractor : MonoBehaviour
     {
         float inputY = - Input.GetAxis("Vertical");
         float inputX = Input.GetAxis("Horizontal");
+        if (Input.GetButton("Fire1"))
+            inputY = -1;
         if (inputY != 0 || inputX != 0)
         {
             Vector3 moveDir = mainCam.right * inputY + mainCam.forward * inputX;

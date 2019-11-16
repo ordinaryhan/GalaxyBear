@@ -6,17 +6,6 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void ChangeScene(string sceneName)
     {
@@ -26,6 +15,12 @@ public class MainMenu : MonoBehaviour
 
     public void QuitApp()
     {
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
         Application.Quit();
+#endif
+
     }
 }

@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShotBehavior : MonoBehaviour {
+public class ShotBehaviorNew : MonoBehaviour {
 
     public GameObject explosion;
     float distance;
 
     // Use this for initialization
+
+    
     void Start()
     {
-        StartCoroutine(destroyBullet());
+        StartCoroutine("destroyBullet");
     }
     // Update is called once per frame
     void Update () {

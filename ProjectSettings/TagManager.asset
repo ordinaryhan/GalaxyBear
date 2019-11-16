@@ -8,6 +8,8 @@ TagManager:
   - Friendly Planet
   - FxTemporaire
   - enemy
+  - thorn
+  - explosion
   layers:
   - Default
   - TransparentFX
