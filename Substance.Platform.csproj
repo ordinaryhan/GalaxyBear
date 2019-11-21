@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DECDAA0E-A8AA-9E9C-DBA2-D28BF63E638B}</ProjectGuid>
+    <ProjectGuid>{ED687EC2-A2C3-CBBD-EAE6-AC3B5FB24FC5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Substance.Platform</AssemblyName>
@@ -65,10 +65,10 @@
     <Compile Include="Assets\Allegorithmic\Plugins\Substance.Platform\NativeFunctions.cs" />
     <None Include="Assets\Allegorithmic\Plugins\Substance.Platform\Substance.Platform.asmdef" />
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBearProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBearProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -256,17 +256,17 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="Google.ProtocolBuffers">
-      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBearProject/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
+    <Reference Include="Substance.Game">
+      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
     </Reference>
     <Reference Include="Substance.Editor">
-      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBearProject/Assets/Allegorithmic/Plugins/Substance/Substance Engine/Editor/Substance.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Substance.Game">
-      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBearProject/Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
+      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Assets/Allegorithmic/Plugins/Substance/Substance Engine/Editor/Substance.Editor.dll</HintPath>
     </Reference>
     <Reference Include="SourceUnityLib">
-      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBearProject/Assets/Allegorithmic/Plugins/Substance/Substance Source/Editor/SourceUnityLib.dll</HintPath>
+      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Assets/Allegorithmic/Plugins/Substance/Substance Source/Editor/SourceUnityLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ProtocolBuffers">
+      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
