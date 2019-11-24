@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShotBehaviorNew : MonoBehaviour {
+public class ShotBehavior : MonoBehaviour {
 
     public GameObject explosion;
     float distance;
@@ -32,7 +32,7 @@ public class ShotBehaviorNew : MonoBehaviour {
         if (other.gameObject.CompareTag("enemy"))
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(other.gameObject);
+           // Destroy(other.gameObject);
             Destroy(this.gameObject);
 
         }

@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShotBehavior : MonoBehaviour {
-
+public class ShotAction : MonoBehaviour {
+    
     public GameObject explosion;
     float distance;
     Animator ani;
@@ -12,6 +12,7 @@ public class ShotBehavior : MonoBehaviour {
     {
         StartCoroutine(destroyBullet());
     }
+
     // Update is called once per frame
     void Update () {
 		transform.position += transform.forward * Time.deltaTime * 10f;
@@ -23,7 +24,6 @@ public class ShotBehavior : MonoBehaviour {
     {
         yield return new WaitForSeconds(1.0f);
         Destroy(this.gameObject);
-
     }
 
 
@@ -32,13 +32,13 @@ public class ShotBehavior : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("enemy"))
         {
+            other.gameObject.GetComponent<MoveEnemy>().SMG.scoreUP();
             ani = other.gameObject.GetComponent<Animator>();
             ani.SetInteger("animation", 6);
             Instantiate(explosion, transform.position, Quaternion.identity);
+            other.gameObject.GetComponent<MoveEnemy>().setDestroy();
+            //Destroy(other.gameObject, 2.5f);
             Destroy(this.gameObject);
-            Destroy(other.gameObject, 1.5f);
-            
-
         }
     }
 

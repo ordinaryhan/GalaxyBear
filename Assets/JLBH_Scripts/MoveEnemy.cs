@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveEnemy : MonoBehaviour
 {
+    public ScoreManager SMG;
     public Transform player;
     int MoveSpeed = 2;
     float MaxDist = 11.5f;
@@ -18,5 +19,10 @@ public class MoveEnemy : MonoBehaviour
         {
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
         }
+    }
+
+    public void setDestroy()
+    {
+        Destroy(this.gameObject, 1.5f);
     }
 }

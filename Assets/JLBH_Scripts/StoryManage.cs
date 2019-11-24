@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StoryManage : MonoBehaviour
 {
     int storyCnt = 0;
     int storyNum = 3;
+    public Text clickText;
     public GameObject[] story = new GameObject[3];
+    bool flag = false;
 
     private IEnumerator coroutine;
     
@@ -18,6 +22,21 @@ public class StoryManage : MonoBehaviour
         StartCoroutine(coroutine);
     }
 
+    private void Update()
+    {
+        // click or X Button
+        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.JoystickButton2))
+        {
+            if (!flag)
+            {
+                flag = true;
+                clickText.text = "> SKIP (Click +1)";
+            }
+            else
+                moveMain();
+        }
+    }
+
     IEnumerator showStory()
     {
         while (true)
@@ -26,7 +45,7 @@ public class StoryManage : MonoBehaviour
             if (storyCnt >= storyNum)
                 break;
            
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3.5f);
 
             story[storyCnt].SetActive(true);
             for(int i=0; i<storyNum; i++)
@@ -34,7 +53,15 @@ public class StoryManage : MonoBehaviour
                 if (i != storyCnt)
                     story[i].SetActive(false);
             }
-        
+
         }
+        yield return new WaitForSeconds(3.5f);
+        moveMain();
     }
+
+    public void moveMain()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
+
 }

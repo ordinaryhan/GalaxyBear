@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2356442}
   - component: {fileID: 3370324}
   - component: {fileID: 11489952}
-  - component: {fileID: 11468384}
   - component: {fileID: 10825254}
   - component: {fileID: 7619021580059888587}
+  - component: {fileID: 11468384}
   m_Layer: 0
   m_Name: shot_prefab2
   m_TagString: Untagged
@@ -101,19 +101,6 @@ MonoBehaviour:
   m_lineColor: {r: 0.14827341, g: 0.5815213, b: 0.6415094, a: 1}
   m_lineWidth: 66
   m_lightSaberFactor: 0.747
---- !u!114 &11468384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb039d3a64491f4ebfc852d25b5ee70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosion: {fileID: 100002, guid: 872363974360b1540b92d8d9e0453afa, type: 3}
 --- !u!108 &10825254
 Light:
   m_ObjectHideFlags: 0
@@ -187,3 +174,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11468384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb039d3a64491f4ebfc852d25b5ee70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 100002, guid: 872363974360b1540b92d8d9e0453afa, type: 3}

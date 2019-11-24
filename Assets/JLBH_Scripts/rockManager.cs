@@ -9,12 +9,14 @@ public class rockManager : MonoBehaviour
     public Transform rockTrans;
     public GameObject rockObj;
     public GameObject explosion;
+    Transform exploTrans;
     Vector3 startV;
     Vector3 exploV;
 
     // Start is called before the first frame update
     void Start()
     {
+        exploTrans = explosion.GetComponent<Transform>();
         startV = startTrans.position;
         exploV = explosionTrans.position;
         StartCoroutine("setRock");
