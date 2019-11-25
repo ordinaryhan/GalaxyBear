@@ -92,10 +92,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 909, y: 322}
-  m_MaxSize: {x: 22006, y: 10022}
+  m_MinSize: {x: 913, y: 322}
+  m_MaxSize: {x: 22010, y: 10022}
   vertical: 0
-  controlID: 131
+  controlID: 158
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 322}
   m_MaxSize: {x: 4002, y: 8022}
   vertical: 1
-  controlID: 36
+  controlID: 122
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,8 +161,8 @@ MonoBehaviour:
     y: 0
     width: 242
     height: 731
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 222}
+  m_MaxSize: {x: 4004, y: 4022}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -330,21 +330,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2ed4ffffc8dfffff7cf0ffff5efbffff52420000724200007e420000ea4500000246000052460000964600009e460000bc460000dc4600009e6f000066700000f2770000867800008e780000cc780000
+      m_ExpandedIDs: 3accffffd4f7ffff98faffff64420000985f000022620000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Main Camera
+        m_OriginalName: Main Camera
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 24922
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
@@ -441,10 +441,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 44}
-    m_SelectedIDs: 58370000
-    m_LastClickedID: 14168
-    m_ExpandedIDs: 0000000068310000763100008431000068320000b6320000d03200005633000096330000fa33000000340000883400008c34000028350000b83500004c36000072370000843700002c3800007c380000a2380000dc380000cc3c0000323d0000b23d0000f43d0000c23e00002c3f0000aa400000b8400000c6420000c8420000ca420000cc420000ce42000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 32370000
+    m_LastClickedID: 14130
+    m_ExpandedIDs: 0000000052310000603100006e3100005232000090320000aa3200003033000070330000d4330000da33000062340000663400000235000092350000263600004c3700005e37000006380000563800007c380000b6380000a63c00000c3d00008c3d0000ce3d00009c3e0000063f0000844000009240000036450000384500003a4500003c4500003e45000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -472,7 +472,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000068310000763100008431000068320000b63200005633000096330000fa33000000340000883400008c34000028350000b83500004c36000072370000843700002c3800007c380000a2380000dc380000cc3c0000323d0000b23d0000f43d0000c23e00002c3f0000aa400000b8400000c6420000c8420000ca420000cc420000ce420000
+    m_ExpandedIDs: 0000000052310000603100006e3100005232000090320000aa3200003033000070330000d4330000da33000062340000663400000235000092350000263600004c3700005e37000006380000563800007c380000b6380000a63c00000c3d00008c3d0000ce3d00009c3e0000063f0000844000009240000036450000384500003a4500003c4500003e450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -645,9 +645,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 1, z: -99.489296}
+    m_Target: {x: -0.2944026, y: 12.740463, z: 2.7028308}
     speed: 2
-    m_Value: {x: 0, y: 1, z: -99.489296}
+    m_Value: {x: -0.2944026, y: 12.740463, z: 2.7028308}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -680,9 +680,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.01585489, y: -0.0746211, z: 0.001186441, w: 0.9970853}
   m_Size:
-    m_Target: 261.21408
+    m_Target: 3.563818
     speed: 2
-    m_Value: 261.21408
+    m_Value: 3.563818
   m_Ortho:
     m_Target: 1
     speed: 2
