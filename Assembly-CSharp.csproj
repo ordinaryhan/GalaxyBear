@@ -165,6 +165,23 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\GvrCursorHelper.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+    <Compile Include="Assets\JLBH_Scripts\bullet.cs" />
+    <Compile Include="Assets\JLBH_Scripts\EnemyAnimation.cs" />
+    <Compile Include="Assets\JLBH_Scripts\GravityAttractor.cs" />
+    <Compile Include="Assets\JLBH_Scripts\GravityBody.cs" />
+    <Compile Include="Assets\JLBH_Scripts\HealthManager.cs" />
+    <Compile Include="Assets\JLBH_Scripts\MainMenu.cs" />
+    <Compile Include="Assets\JLBH_Scripts\MoveEnemy.cs" />
+    <Compile Include="Assets\JLBH_Scripts\MoveRock.cs" />
+    <Compile Include="Assets\JLBH_Scripts\MoveTrap.cs" />
+    <Compile Include="Assets\JLBH_Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\JLBH_Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\JLBH_Scripts\PlayerShoot.cs" />
+    <Compile Include="Assets\JLBH_Scripts\rockManager.cs" />
+    <Compile Include="Assets\JLBH_Scripts\ScoreManager.cs" />
+    <Compile Include="Assets\JLBH_Scripts\ShotAction.cs" />
+    <Compile Include="Assets\JLBH_Scripts\StoryManage.cs" />
+    <Compile Include="Assets\JLBH_Scripts\TimerManager.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
@@ -180,22 +197,6 @@
     <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Spawn System\CFX_SpawnSystem.cs" />
     <Compile Include="Assets\LowPolyEarth\EarthSpinScript.cs" />
-    <Compile Include="Assets\Scripts\bullet.cs" />
-    <Compile Include="Assets\Scripts\EnemyAnimation.cs" />
-    <Compile Include="Assets\Scripts\GravityAttractor.cs" />
-    <Compile Include="Assets\Scripts\GravityBody.cs" />
-    <Compile Include="Assets\Scripts\HealthManager.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\MoveEnemy.cs" />
-    <Compile Include="Assets\Scripts\MoveRock.cs" />
-    <Compile Include="Assets\Scripts\MoveTrap.cs" />
-    <Compile Include="Assets\Scripts\PlayerMove.cs" />
-    <Compile Include="Assets\Scripts\PlayerShoot.cs" />
-    <Compile Include="Assets\Scripts\rockManager.cs" />
-    <Compile Include="Assets\Scripts\ScoreManager.cs" />
-    <Compile Include="Assets\Scripts\ShotBehaviorNew.cs" />
-    <Compile Include="Assets\Scripts\StoryManage.cs" />
-    <Compile Include="Assets\Scripts\TimerManager.cs" />
     <Compile Include="Assets\Suriyun\Scripts\AnimatorController.cs" />
     <Compile Include="Assets\Suriyun\Scripts\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Suriyun\Scripts\Swapper.cs" />
@@ -266,31 +267,31 @@
     <None Include="Assets\VolumetricLines\Shaders\_SimpleShader.cginc" />
     <None Include="Assets\GoogleVR\Plugins\Android\AndroidManifest-Cardboard.xml" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBear/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBear/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBear/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBear/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBear/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBear/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBear/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBear/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBear/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -464,10 +465,10 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Substance.Game">
-      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
+      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBear/Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffers">
-      <HintPath>C:/Users/bjiso/my_repo/GalaxyBear/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
+      <HintPath>C:/Users/USER/Desktop/Coding/Unity/GalaxyBear/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

@@ -9,6 +9,7 @@ public class HealthManager : MonoBehaviour
     private int hitCount;
     private bool hitFlag = false;
 
+    public PauseMenu SceneManager;
     public Transform player;
     
     void Start()
@@ -27,6 +28,8 @@ public class HealthManager : MonoBehaviour
             hitFlag = true;
             Heart[hitCount].SetActive(false);
             hitCount++;
+            if (hitCount >= 3)
+                SceneManager.moveMain();
             StartCoroutine("HitAnime");
         }
     }
@@ -46,7 +49,7 @@ public class HealthManager : MonoBehaviour
                 player.localScale = playerSize;
                 if (i == 7)
                     player.gameObject.SetActive(false);
-                yield return new WaitForSeconds(0.001f);
+                yield return new WaitForSeconds(0.002f);
                 player.gameObject.SetActive(true);
             }
             // 커지기
@@ -58,7 +61,7 @@ public class HealthManager : MonoBehaviour
                 player.localScale = playerSize;
                 if (i == 7)
                     player.gameObject.SetActive(false);
-                yield return new WaitForSeconds(0.001f);
+                yield return new WaitForSeconds(0.002f);
                 player.gameObject.SetActive(true);
             }
         }

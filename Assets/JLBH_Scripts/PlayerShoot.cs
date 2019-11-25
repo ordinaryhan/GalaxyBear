@@ -20,10 +20,17 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyUp(KeyCode.A))
         {
             a++;
         }
+#else
+        if (Input.GetKeyUp(KeyCode.JoystickButton0)) //A
+        {
+            a++;
+        }
+#endif
     }
 
     IEnumerator bullett()
