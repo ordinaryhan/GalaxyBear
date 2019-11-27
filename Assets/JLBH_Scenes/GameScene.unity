@@ -20644,12 +20644,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 409492858}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &825253249 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400004, guid: afa34a8748c82294d8c76c0493fcdd59,
-    type: 3}
-  m_PrefabInstance: {fileID: 409492858}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &839715828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22491,7 +22485,10 @@ MonoBehaviour:
   - {fileID: 825253248}
   - {fileID: 2066338838}
   - {fileID: 1073059556}
-  EnemyPrefab: {fileID: 825253249}
+  EnemyPrefab: {fileID: 4813656212749956038, guid: fb984259e40015f478fe75a953a06db9,
+    type: 3}
+  EnemyPrefab2: {fileID: 6471150391097575199, guid: 97c5675a8187bbe45a17b12ad021de58,
+    type: 3}
 --- !u!4 &1010583163
 Transform:
   m_ObjectHideFlags: 0
@@ -27310,6 +27307,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1904096861149346, guid: efe7a72fe94401e4fad2772ac5ea1794, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4918529409114300, guid: efe7a72fe94401e4fad2772ac5ea1794, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07409087
@@ -31098,26 +31099,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 807752585}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1390951803188930 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8180894718178357962, guid: 97c5675a8187bbe45a17b12ad021de58,
-    type: 3}
-  m_PrefabInstance: {fileID: 8182074562536735752}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1390951803188931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390951803188930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75e13f6233f083841b66a23e2bd1bff4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SMG: {fileID: 668185623}
-  player: {fileID: 587214968}
 --- !u!65 &1706878066716092701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31146,6 +31127,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 587214968}
+    - target: {fileID: 6474742598435599789, guid: 97c5675a8187bbe45a17b12ad021de58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8180894718178357962, guid: 97c5675a8187bbe45a17b12ad021de58,
         type: 3}
       propertyPath: m_Name
