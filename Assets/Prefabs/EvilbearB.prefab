@@ -1747,8 +1747,8 @@ GameObject:
   - component: {fileID: 6475640830290037837}
   - component: {fileID: 6475640830290037836}
   - component: {fileID: 6475640830290037872}
-  - component: {fileID: 6475640830290037838}
   - component: {fileID: 1498887769720007730}
+  - component: {fileID: 6475640830290037838}
   m_Layer: 0
   m_Name: EvilbearB
   m_TagString: enemy
@@ -1786,7 +1786,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 02d5ec93278ea5c4cae238841be11363, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1833,18 +1833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04646cae890acd4e8a4683a2fc16b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6475640830290037838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6474742598435599789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 352b089a883c7d449be5abc6e2199742, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1498887769720007730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,6 +1846,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePower: 1
+--- !u!114 &6475640830290037838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6474742598435599789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352b089a883c7d449be5abc6e2199742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6474745573445408689
 GameObject:
   m_ObjectHideFlags: 0

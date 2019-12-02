@@ -23,10 +23,10 @@ public class SpawnManage : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         
-    }
+    }*/
 
 
     IEnumerator Spawn()
