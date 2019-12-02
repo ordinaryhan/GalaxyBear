@@ -12,12 +12,14 @@ public class EnemyAnimation : MonoBehaviour
     void Start()
     {
         ani = GetComponent<Animator>();
-        
+        ani.SetInteger("animation", 15);
     }
 
+    /*
     // Update is called once per frame
     void Update()
     {
        // ani.SetInteger("animation", 15);
     }
+    */
 }

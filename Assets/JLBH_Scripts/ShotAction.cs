@@ -32,12 +32,9 @@ public class ShotAction : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("enemy"))
         {
-            other.gameObject.GetComponent<MoveEnemy>().SMG.scoreUP();
-            ani = other.gameObject.GetComponent<Animator>();
-            ani.SetInteger("animation", 6);
+            //other.gameObject.GetComponent<MoveEnemy>().SMG.scoreUP();
             Instantiate(explosion, transform.position, Quaternion.identity);
-            other.gameObject.GetComponent<MoveEnemy>().setDestroy();
-            //Destroy(other.gameObject, 2.5f);
+            other.gameObject.GetComponent<Enemy>().setDestroy();
             Destroy(this.gameObject);
         }
     }

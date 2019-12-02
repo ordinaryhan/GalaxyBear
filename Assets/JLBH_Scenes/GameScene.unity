@@ -18992,7 +18992,7 @@ GameObject:
   - component: {fileID: 668185625}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19071,7 +19071,7 @@ MonoBehaviour:
   - {fileID: 495571813}
   - {fileID: 1194886623}
   - {fileID: 2030345138}
-  SceneManager: {fileID: 0}
+  SceneManager: {fileID: 154967441}
   player: {fileID: 1115910647}
 --- !u!1001 &670030527
 PrefabInstance:
@@ -19957,7 +19957,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 154967441}
-        m_MethodName: resume
+        m_MethodName: restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31131,6 +31131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471150391097575199, guid: 97c5675a8187bbe45a17b12ad021de58,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8180894718178357962, guid: 97c5675a8187bbe45a17b12ad021de58,
         type: 3}
