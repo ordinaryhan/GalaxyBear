@@ -166,7 +166,9 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\Internal\SuppressMemoryAllocationErrorAttribute.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
     <Compile Include="Assets\JLBH_Scripts\bullet.cs" />
+    <Compile Include="Assets\JLBH_Scripts\Enemy.cs" />
     <Compile Include="Assets\JLBH_Scripts\EnemyAnimation.cs" />
+    <Compile Include="Assets\JLBH_Scripts\GameOver.cs" />
     <Compile Include="Assets\JLBH_Scripts\GravityAttractor.cs" />
     <Compile Include="Assets\JLBH_Scripts\GravityBody.cs" />
     <Compile Include="Assets\JLBH_Scripts\HealthManager.cs" />
@@ -180,8 +182,10 @@
     <Compile Include="Assets\JLBH_Scripts\rockManager.cs" />
     <Compile Include="Assets\JLBH_Scripts\ScoreManager.cs" />
     <Compile Include="Assets\JLBH_Scripts\ShotAction.cs" />
+    <Compile Include="Assets\JLBH_Scripts\SpawnManage.cs" />
     <Compile Include="Assets\JLBH_Scripts\StoryManage.cs" />
     <Compile Include="Assets\JLBH_Scripts\TimerManager.cs" />
+    <Compile Include="Assets\JLBH_Scripts\TitleManage.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
@@ -217,6 +221,7 @@
     <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Alpha-Specular TintColor.shader" />
     <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
     <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S AlphaBlend NoSoftParticles.shader" />
+    <None Include="Assets\Spaceship\Materials\2-sided.shader" />
     <None Include="Assets\JMO Assets\WarFX\_Effects\MuzzleFlashes\!MuzzleFlash Differences.txt" />
     <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Smoke Scroll.shader" />
     <None Include="Assets\VolumetricLines\Shaders\Additive.shader" />
