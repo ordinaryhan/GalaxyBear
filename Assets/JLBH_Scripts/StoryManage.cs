@@ -7,17 +7,19 @@ using UnityEngine.SceneManagement;
 public class StoryManage : MonoBehaviour
 {
     int storyCnt = 0;
-    int storyNum = 3;
+    int storyNum = 4;
     public Text clickText;
-    public GameObject[] story = new GameObject[3];
+    public GameObject[] story = new GameObject[4];
     bool flag = false;
 
     private IEnumerator coroutine;
     
     void Start()
     {
-        story[1].SetActive(false);
-        story[2].SetActive(false);
+        for(int i=1; i<storyNum; i++)
+        {
+            story[i].SetActive(false);
+        }
         coroutine = showStory();
         StartCoroutine(coroutine);
     }

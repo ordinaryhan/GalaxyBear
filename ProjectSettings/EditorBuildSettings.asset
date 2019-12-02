@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/JLBH_Scenes/TitleScene.unity
+    guid: 9f9d26909d16d22479f6c84b8c6f7242
+  - enabled: 1
     path: Assets/JLBH_Scenes/MainScene.unity
     guid: 4a5b63276561e7548885fa8eb235654c
   - enabled: 1
