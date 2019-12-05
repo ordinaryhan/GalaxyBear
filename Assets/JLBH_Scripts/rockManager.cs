@@ -40,13 +40,14 @@ public class rockManager : MonoBehaviour
         while (true)
         {
             // 운석 충돌 주기는 랜덤하게
-            int waitTime = Random.Range(6, 20);
-            yield return new WaitForSeconds(waitTime);
-
+            //int waitTime = Random.Range(6, 20);
+            //yield return new WaitForSeconds(waitTime);
+            yield return new WaitForSeconds(2);
             // 운석 세팅
             startV = startTrans.position;
             rockTrans.position = startV;
             rockObj.SetActive(true);
+            yield return new WaitForSeconds(4);
         }
     }
 }
